@@ -23,7 +23,6 @@ function App() {
               <div className="flex">
                 <NavLink
                   to="/"
-                  end
                   className={({ isActive }) =>
                     `flex items-center ${isActive ? "text-blue-600" : ""}`
                   }
@@ -33,7 +32,6 @@ function App() {
               </div>
               <div className="flex items-center space-x-4">
                 <NavLink
-                  end
                   to="/app1"
                   className={({ isActive }) =>
                     `px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 ${
@@ -44,7 +42,6 @@ function App() {
                   App 1
                 </NavLink>
                 <NavLink
-                  end
                   to="/app2"
                   className={({ isActive }) =>
                     `px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 ${
