@@ -3,12 +3,10 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 
-// Lazy load the micro frontend apps
 const App1 = lazy(() => import("app1/App"));
 const App2 = lazy(() => import("app2/App"));
 
 function App() {
-  // Get the base URL from the Vite environment
   const basename = import.meta.env.BASE_URL;
 
   return (
