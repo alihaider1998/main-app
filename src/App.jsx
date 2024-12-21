@@ -63,6 +63,9 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/app1/*" element={<App1 />} />
               <Route path="/app2/*" element={<App2 />} />
+              {/* Add explicit 404 route */}
+              <Route path="/404" element={<NotFound />} />
+              {/* Catch-all route remains at the end */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
