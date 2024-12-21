@@ -7,6 +7,7 @@ import {
   NavLink,
 } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
+import NotFound from "./components/NotFound";
 
 const App1 = lazy(() => import("app1/App"));
 const App2 = lazy(() => import("app2/App"));
@@ -62,6 +63,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/app1/*" element={<App1 />} />
               <Route path="/app2/*" element={<App2 />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
