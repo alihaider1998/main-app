@@ -1,6 +1,11 @@
 // src/App.jsx
 import { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 
 const App1 = lazy(() => import("app1/App"));
@@ -16,23 +21,39 @@ function App() {
           <div className="px-4 mx-auto max-w-7xl">
             <div className="flex justify-between h-16">
               <div className="flex">
-                <Link to="/" className="flex items-center">
+                <NavLink
+                  to="/"
+                  end
+                  className={({ isActive }) =>
+                    `flex items-center ${isActive ? "text-blue-600" : ""}`
+                  }
+                >
                   <span className="text-xl font-bold">Main App</span>
-                </Link>
+                </NavLink>
               </div>
               <div className="flex items-center space-x-4">
-                <Link
+                <NavLink
+                  end
                   to="/app1"
-                  className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                  className={({ isActive }) =>
+                    `px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 ${
+                      isActive ? "bg-gray-100" : ""
+                    }`
+                  }
                 >
                   App 1
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
+                  end
                   to="/app2"
-                  className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                  className={({ isActive }) =>
+                    `px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 ${
+                      isActive ? "bg-gray-100" : ""
+                    }`
+                  }
                 >
                   App 2
-                </Link>
+                </NavLink>
               </div>
             </div>
           </div>
