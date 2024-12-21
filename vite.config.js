@@ -46,6 +46,9 @@ export default defineConfig({
         app1: `https://${GITHUB_USERNAME}.github.io/app1/assets/remoteEntry.js`,
         app2: `https://${GITHUB_USERNAME}.github.io/app2/assets/remoteEntry.js`,
       },
+      exposes: {
+        "./NotFound": "./src/components/NotFound",
+      },
       shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
