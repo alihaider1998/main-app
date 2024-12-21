@@ -49,7 +49,7 @@ export default defineConfig({
       shared: ["react", "react-dom"],
     }),
   ],
-  base: BASE_URL,
+  base: "/main-app/",
   build: {
     target: "esnext",
     modulePreload: false,
