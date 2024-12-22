@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Router basename={basename}>
-      <div className="min-h-screen bg-gray-100 ">
+      <div className="min-h-screen bg-gray-100">
         <nav className="bg-white shadow-lg">
           <div className="px-4 mx-auto max-w-7xl">
             <div className="flex justify-between h-16">
