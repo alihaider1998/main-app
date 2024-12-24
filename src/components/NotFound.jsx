@@ -8,7 +8,7 @@ function NotFound() {
         The page you&apos;re looking for doesn&apos;t exist or has been moved.
       </p>
       <a
-        href="/main-app"
+        href="/main-app/"
         className="px-4 py-2 text-white transition-colors bg-blue-500 rounded-md hover:bg-blue-600"
       >
         Go to Home
